@@ -55,7 +55,7 @@ router.get('/login', function (req, res) {
                 console.log(result.rows[0]);
                 if (result.rows[0] == undefined) {
                     res.send(false);
-                } else if (result.rows[0].password == req.query.pass) {
+                } else if (result.rows[0].password == req.query.pwd) {
                     res.send(true);
                 } else {
                     res.send(false);
@@ -65,19 +65,19 @@ router.get('/login', function (req, res) {
     });
 });
 
-router.post('/register', function (req, res) {
+//router.post('/register', function (req, res) {
 
-  //DBにアクセスし、リクエストの情報をもとにuserテーブルにインサートする
-  //登録できた場合true、途中でエラーの場合falseを返す
+    //DBにアクセスし、リクエストの情報をもとにuserテーブルにインサートする
+    //登録できた場合true、途中でエラーの場合falseを返す
 
-});
+//});
 
-router.delete('/del', function (req, res) {
+//router.delete('/del', function (req, res) {
 
     //DBにアクセスして、リクエストの情報をもとにuserテーブルの行を削除
     //削除できた場合trueを返し、エラーの場合falseを返す
 
-});
+//});
 
 
 
